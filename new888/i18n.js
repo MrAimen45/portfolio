@@ -5,7 +5,7 @@
  */
 const translations = {
   "it": {
-    "title": "Aimen Kamal Eddine Benzaoui | MerrySignal Studio & Automation Engineering",
+    "title": "Aimen Kamal Eddine Benzaoui | Automation Engineering",
     "nav": {
       "home": "Home",
       "about": "Chi Sono",
@@ -198,7 +198,7 @@ const translations = {
     }
   },
   "en": {
-    "title": "Aimen Kamal Eddine Benzaoui | MerrySignal Studio & Automation Engineering",
+    "title": "Aimen Kamal Eddine Benzaoui | Automation Engineering",
     "nav": {
       "home": "Home",
       "about": "About",
