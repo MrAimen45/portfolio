@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "role": "M.Sc. Automation Engineering Student - University of Catania",
+    "studio": "MerrySignal Studio Founder",
+    "download_cv": "Download CV",
+    "cv_it": "Download Italian CV",
+    "cv_en": "Download English CV"
+  },
+  "contact": {
+    "phone": "Phone / WhatsApp",
+    "location": "Location",
+    "email": "Email"
+  }
+}

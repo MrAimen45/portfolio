@@ -1,0 +1,43 @@
+/* Language Switcher Styling */
+.lang-selector {
+  margin: 0 0.5rem;
+}
+
+.lang-select {
+  background: var(--bg-surface-elevated);
+  color: var(--text-primary);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 0.4rem 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.lang-select:focus {
+  border-color: var(--cyber-cyan);
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .section-title {
+  padding-left: 0;
+  padding-right: 1rem;
+  border-left: none;
+  border-right: 2px solid var(--cyber-cyan);
+}
+
+[dir="rtl"] .brand-logo {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .brand-logo span.role-tag {
+  padding-left: 0;
+  padding-right: 0.35rem;
+  border-left: none;
+  border-right: 1px solid var(--border-medium);
+}

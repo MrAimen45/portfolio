@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+
+  <!-- SEO & Social Metadata -->
+  <title data-i18n="title">Aimen Kamal Eddine Benzaoui | MerrySignal Studio & Automation Engineering</title>
+  <meta name="description"
+    content="MerrySignal Studio: Esperienze Digitali Professionali. Portfolio di Aimen Kamal Eddine Benzaoui, specialista in Cybersecurity ICS/OT e studente di Laurea Magistrale in Automation Engineering a Catania.">
+  <meta name="author" content="Aimen Kamal Eddine Benzaoui">
+  <meta name="keywords"
+    content="MerrySignal Studio, Automation Engineering, Catania, ICS, OT Cybersecurity, Electrical Engineer, Italia, Algeria, Project Management">
+
+  <!-- Immediate Theme Initialization Script to prevent FOUC -->
+  <script>
+    {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      const meta = document.querySelector('meta[name="color-scheme"]');
+      if (meta) meta.content = savedTheme;
+    }
+  </script>
+
+  <!-- Google Fonts: Syne, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Syne:wght@700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/language.css">
+</head>
+
+<body>
+
+  <!-- =========================================================================
+       1. Header & Sticky Navigation
+       ========================================================================= -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <!-- Brand / Identity -->
+      <a href="#hero" class="brand-logo" aria-label="Aimen Benzaoui Home">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+            <line x1="6" y1="6" x2="6.01" y2="6"></line>
+            <line x1="6" y1="18" x2="6.01" y2="18"></line>
+          </svg>
+        </div>
+        <span>AKB<span class="role-tag">// OT-SEC</span></span>
+      </a>
+
+      <!-- Navigation Wrapper & Drawer -->
+      <nav class="nav-wrapper" aria-label="Primary Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#about" class="nav-link" data-i18n="nav.about">Chi Sono</a></li>
+          <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Competenze</a></li>
+          <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Progetti</a></li>
+          <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Esperienza</a></li>
+          <li><a href="#services" class="nav-link" data-i18n="nav.services">Servizi</a></li>
+          <li><a href="#objective" class="nav-link" data-i18n="nav.objective">Obiettivo</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contatti</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Controls -->
+      <div class="header-actions">
+        <!-- Live System Status Badge (Desktop Only) -->
+        <div class="status-pill desktop-only" title="Telemetry Daemon Active">
+          <span class="pulse-indicator"></span>
+          <span>ICS OT // ONLINE</span>
+        </div>
+
+        <!-- Theme Toggle Button (Light/Dark) -->
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle light or dark theme"
+          title="Toggle theme">
+          <!-- Moon Icon (for dark mode) -->
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <!-- Sun Icon (for light mode) -->
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Language Switcher -->
+        <div class="lang-selector">
+          <select id="lang-switcher" class="lang-select" aria-label="Seleziona lingua">
+            <option value="it" title="Italiano">IT</option>
+            <option value="en" title="English">EN</option>
+            <option value="ar" title="العربية">AR</option>
+          </select>
+        </div>
+
+        <!-- Mobile Navigation Hamburger -->
+        <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Open mobile navigation"
+          aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         2. Hero Section
+         ========================================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <!-- Hero Text & Badges - LEFT SIDE -->
+        <div class="hero-content reveal-on-scroll">
+          <h1 class="hero-name">
+            <span data-i18n="hero.name">AIMEN KAMAL EDDINE</span> <br>
+            <span class="name-gradient" data-i18n="hero.surname">BENZAOUI</span>
+          </h1>
+
+          <div class="hero-role">
+            <span data-i18n="hero.role"></span>
+            <span style="color: var(--text-muted)">|</span>
+            <span style="color: var(--cyber-emerald)" data-i18n="hero.founder"></span>
+          </div>
+
+          <p class="hero-intro" data-i18n="hero.intro"></p>
+
+          <!-- Quick Contact Badges -->
+          <div class="hero-badges">
+            <div class="contact-badge dropdown">
+              <span data-i18n="hero.download_cv">Scarica CV</span>
+              <div class="dropdown-content">
+                <a href="Aimen_Benzaoui_CV_IT_Catania.pdf" download>Italiano</a>
+                <a href="Aimen_Benzaoui_CV_EN_Catania.pdf" download>English</a>
+              </div>
+            </div>
+
+            <a href="https://wa.me/393522262160" class="contact-badge" title="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>+39 352 226 2160</span>
+            </a>
+
+            <a href="mailto:aimmenbenn@gmail.com" class="contact-badge" title="Direct Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>aimmenbenn@gmail.com</span>
+            </a>
+
+            <div class="contact-badge" title="Location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span data-i18n="contact.location_value">Catania, Italia</span>
+            </div>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary">
+              <span data-i18n="nav.projects">Projects</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+
+            <a href="https://www.youtube.com/playlist?list=PLHKYELZg-UwUGQ2Nhe0PQ4oCfQFTkVRWk" target="_blank"
+              rel="noopener noreferrer" class="btn btn-accent">
+              <span data-i18n="hero.explore_demo">Explore ICS Lab Demo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </a>
+
+            <div class="contact-badge dropdown">
+              <span data-i18n="hero.download_cv">Download Resume</span>
+              <div class="dropdown-content">
+                <a href="Aimen_Benzaoui_CV_IT_Catania.pdf" download>Italiano</a>
+                <a href="Aimen_Benzaoui_CV_EN_Catania.pdf" download>English</a>
+              </div>
+            </div>
+
+            <a href="#contact" class="btn btn-secondary">
+              <span data-i18n="hero.contact">Contact Me</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Profile Photo Section - RIGHT SIDE (opposite name) -->
+        <div class="hero-profile reveal-on-scroll">
+          <div class="profile-container">
+            <div class="profile-frame">
+              <img src="MYphoto.png" alt="Aimen Kamal Eddine Benzaoui - ICS/OT Cybersecurity Specialist" class="profile-image">
+            </div>
+            <!-- Animated glow rings -->
+            <div class="glow-ring glow-ring-1"></div>
+            <div class="glow-ring glow-ring-2"></div>
+            <div class="glow-ring glow-ring-3"></div>
+            <!-- Floating accent particles -->
+            <div class="floating-accent accent-1"></div>
+            <div class="floating-accent accent-2"></div>
+            <div class="floating-accent accent-3"></div>
+            <div class="floating-accent accent-4"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. About Me Section
+         ========================================================================= -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <h2 class="section-title" data-i18n="about.title">Hardware Realities & Cyber Defense</h2>
+          <p class="section-desc" data-i18n="about.desc">Grounding industrial cybersecurity in hands-on electrical engineering, operational safety, and field experience.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Narrative -->
+          <div class="about-narrative reveal-on-scroll">
+            <p class="about-lead" data-i18n="about.p1">
+              Graduate in <strong>Electrical & Electronics Engineering</strong> from the <strong>Institute of Electrical and Electronics Engineering (IGEE)</strong> of <strong>M'Hamed Bougara University of Boumerdès (UMBB)</strong>, completed by practical immersion at <strong>Sonatrach's oil and gas production facilities (Gassi Touil)</strong>. Currently an M.Sc. student in <strong>Automation Engineering and Control of Complex Systems</strong> at the <strong>University of Catania</strong>.
+            </p>
+            <p class="about-details" data-i18n="about.p2">
+              Certified by the <strong>U.S. Cybersecurity and Infrastructure Security Agency (CISA/INL)</strong> in ICS cybersecurity and a graduate of <strong>Harvard University's CS50 Cybersecurity</strong>. I leverage hands-on engineering principles and containerized attack-detection architectures (Docker, Conpot, Loki, Grafana) to safeguard critical infrastructure and guarantee continuous industrial operational resilience.
+            </p>
+            <p class="about-details" data-i18n="about.p3">
+              Unlike traditional enterprise IT security, Operational Technology (OT) demands a deep understanding of physical consequences: equipment stress, downtime costs, electrical distribution dynamics, and control loop reliability. My mission is building defense systems that respect real-world physics.
+            </p>
+          </div>
+
+          <!-- Stat KPI Grid -->
+          <div class="stat-card-grid reveal-on-scroll">
+            <div class="stat-card">
+              <div class="stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <span class="stat-number">5x CISA</span>
+              <span class="stat-label" data-i18n="about.stat1">Accreditations from U.S. CISA &amp; Idaho National Lab</span>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <span class="stat-number">Sonatrach</span>
+              <span class="stat-label" data-i18n="about.stat2">Industrial O&amp;G facility field maintenance immersion</span>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+              </div>
+              <span class="stat-number">Harvard CS50</span>
+              <span class="stat-label" data-i18n="about.stat3">Cybersecurity graduate by Prof. David J. Malan</span>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </div>
+              <span class="stat-number">UMBB B.Sc.</span>
+              <span class="stat-label" data-i18n="about.stat4">Electrical &amp; Electronics Engineering degree</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. Skills Section
+         ========================================================================= -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <h2 class="section-title" data-i18n="skills.title">Multidisciplinary <span class="highlight">Competencies</span></h2>
+          <p class="section-desc" data-i18n="skills.desc">Synergizing industrial control architecture, deep protocol telemetry, network
+            auditing, and automation scripting.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1: ICS/OT & Automation -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="category-header reveal-on-scroll">
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                  <rect x="9" y="9" width="6" height="6"></rect>
+                  <line x1="9" y1="1" x2="9" y2="4"></line>
+                  <line x1="15" y1="1" x2="15" y2="4"></line>
+                  <line x1="9" y1="20" x2="9" y2="23"></line>
+                  <line x1="15" y1="20" x2="15" y2="23"></line>
+                  <line x1="20" y1="9" x2="23" y2="9"></line>
+                  <line x1="20" y1="14" x2="23" y2="14"></line>
+                  <line x1="1" y1="9" x2="4" y2="9"></line>
+                  <line x1="1" y1="14" x2="4" y2="14"></line>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title" data-i18n="skills.c1.title">ICS/OT &amp; Industrial Automation</h3>
+                <span class="category-subtitle" data-i18n="skills.c1.sub">OPERATIONAL TECHNOLOGY CORE</span>
+              </div>
+            </div>
+
+            <div class="skill-tags-wrapper reveal-on-scroll">
+              <span class="skill-tag featured">Modbus TCP (Port 502)</span>
+              <span class="skill-tag featured">SCADA/ICS Architecture</span>
+              <span class="skill-tag featured">Conpot Honeypot</span>
+              <span class="skill-tag">PLC Registers &amp; Coils</span>
+              <span class="skill-tag">CISA ICS Frameworks</span>
+              <span class="skill-tag">Electrical Maintenance</span>
+              <span class="skill-tag">Instrumentation &amp; Sensors</span>
+              <span class="skill-tag">Motor Control Circuits</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Cyber Defense & Telemetry -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="category-header reveal-on-scroll">
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title" data-i18n="skills.c2.title">Cyber Defense &amp; Telemetry</h3>
+                <span class="category-subtitle" data-i18n="skills.c2.sub">SECURITY OPERATIONS &amp; AUDITING</span>
+              </div>
+            </div>
+
+            <div class="skill-tags-wrapper">
+              <span class="skill-tag featured">Wireshark (Deep Packet Inspection)</span>
+              <span class="skill-tag featured">Nmap &amp; NSE Scripting</span>
+              <span class="skill-tag featured">Grafana Loki Pipeline</span>
+              <span class="skill-tag">Promtail Agent</span>
+              <span class="skill-tag">Kali Linux</span>
+              <span class="skill-tag">Incident Logging &amp; Detection</span>
+              <span class="skill-tag">Threat Simulation</span>
+              <span class="skill-tag">Network Flow Analysis</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Systems & DevOps -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="category-header reveal-on-scroll">
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title" data-i18n="skills.c3.title">Systems, DevOps &amp; Scripting</h3>
+                <span class="category-subtitle" data-i18n="skills.c3.sub">INFRASTRUCTURE &amp; PLATFORM</span>
+              </div>
+            </div>
+
+            <div class="skill-tags-wrapper reveal-on-scroll">
+              <span class="skill-tag featured">Docker &amp; Docker Compose</span>
+              <span class="skill-tag featured">Linux (Ubuntu &amp; Kali)</span>
+              <span class="skill-tag">Git &amp; GitHub Workflows</span>
+              <span class="skill-tag">Bash Scripting</span>
+              <span class="skill-tag">Virtualization / Testbeds</span>
+              <span class="skill-tag">Syslog Daemon Config</span>
+              <span class="skill-tag">Container Networking</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Programming & Automation -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="category-header reveal-on-scroll">
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title" data-i18n="skills.c4.title">Programming &amp; Tooling</h3>
+                <span class="category-subtitle" data-i18n="skills.c4.sub">SOFTWARE &amp; AUTOMATION UTILITIES</span>
+              </div>
+            </div>
+
+            <div class="skill-tags-wrapper">
+              <span class="skill-tag featured">Python (Network Sockets)</span>
+              <span class="skill-tag featured">Modbus Clients (pymodbus)</span>
+              <span class="skill-tag">CustomTkinter GUIs</span>
+              <span class="skill-tag">Automation Scripts</span>
+              <span class="skill-tag">Flutter &amp; Dart Fundamentals</span>
+              <span class="skill-tag">Object-Oriented Design</span>
+            </div>
+          </div>
+
+          <!-- Spoken Languages Row -->
+          <div class="languages-banner reveal-on-scroll">
+            <div class="languages-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                </path>
+              </svg>
+              <span data-i18n="skills.langs">Spoken Languages:</span>
+            </div>
+
+            <div class="lang-items-row">
+              <div class="lang-badge">
+                <strong data-i18n="skills.l1">Arabic</strong>
+                <span data-i18n="skills.l1lvl">(Native)</span>
+              </div>
+              <div class="lang-badge">
+                <strong data-i18n="skills.l2">English</strong>
+                <span data-i18n="skills.l2lvl">(Technical / Professional Working)</span>
+              </div>
+              <div class="lang-badge">
+                <strong data-i18n="skills.l3">French</strong>
+                <span data-i18n="skills.l3lvl">(Basic)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. Projects Section
+         ========================================================================= -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <h2 class="section-title" data-i18n="projects.title">Featured <span class="highlight">Projects &amp; Deployments</span></h2>
+          <p class="section-desc" data-i18n="projects.desc">Hands-on containerized OT defense labs, custom network tooling, and cross-platform
+            prototypes.</p>
+        </div>
+
+        <!-- Featured Project Spotlight -->
+        <div class="featured-project-card reveal-on-scroll">
+          <div class="featured-flag">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+              </polygon>
+            </svg>
+            <span data-i18n="projects.flag">FLAGSHIP OT SECURITY LAB</span>
+          </div>
+
+          <div class="featured-info">
+            <h3 class="project-title" data-i18n="projects.p1.title">Fake ICS Factory — Attack Simulation &amp; Real-Time Threat Detection Lab</h3>
+            <p class="project-desc" data-i18n="projects.p1.desc">
+              Built a containerized industrial simulation testbed deploying a Conpot honeypot to emulate a Modbus TCP
+              industrial PLC. Configured a complete telemetry pipeline (Promtail + Loki + Grafana) to capture, index,
+              and visualize live adversarial activities (Nmap port reconnaissance, unauthorized Modbus register writes,
+              and DoS floods) without endangering physical operational equipment.
+            </p>
+
+            <div class="project-tags">
+              <span class="project-tag">Docker &amp; Compose</span>
+              <span class="project-tag">Conpot Honeypot</span>
+              <span class="project-tag">Modbus TCP [502]</span>
+              <span class="project-tag">Grafana Loki</span>
+              <span class="project-tag">Promtail</span>
+              <span class="project-tag">Kali Linux</span>
+              <span class="project-tag">Threat Detection</span>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://github.com/Otrise/fake-ics-factory-attack-detection/tree/main#" target="_blank"
+                rel="noopener noreferrer" class="btn btn-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                  </path>
+                </svg>
+                <span data-i18n="projects.p1.github">View GitHub Repository</span>
+              </a>
+
+              <a href="https://www.youtube.com/playlist?list=PLHKYELZg-UwUGQ2Nhe0PQ4oCfQFTkVRWk" target="_blank"
+                rel="noopener noreferrer" class="btn btn-accent">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span data-i18n="projects.p1.yt">Watch YouTube Demo Playlist</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Architecture & Simulated Threat Scenarios Box -->
+          <div class="featured-interactive-pane">
+            <div class="threat-matrix-title">
+              <span data-i18n="projects.matrix">TESTBED ATTACK SIMULATION PROFILE</span>
+              <span style="color: var(--cyber-emerald)">ARCH // DOCKER-OT</span>
+            </div>
+
+            <div class="threat-items-list">
+              <div class="threat-item">
+                <div>
+                  <strong data-i18n="projects.th1.title">01. Nmap Port Reconnaissance</strong>
+                  <p data-i18n="projects.th1.desc">Adversary uses nmap -sV --script modbus-discover to map exposed registers. Conpot intercepts and
+                    logs fingerprinting patterns.</p>
+                </div>
+              </div>
+
+              <div class="threat-item warn">
+                <div>
+                  <strong data-i18n="projects.th2.title">02. Unauthorized Register Mutation</strong>
+                  <p data-i18n="projects.th2.desc">Injected Modbus Function Code 06 (Write Single Register) commands attempting setpoint alteration;
+                    flagged instantly in Loki.</p>
+                </div>
+              </div>
+
+              <div class="threat-item alert">
+                <div>
+                  <strong data-i18n="projects.th3.title">03. DoS &amp; Syn Flood Defense</strong>
+                  <p data-i18n="projects.th3.desc">Telemetry pipeline monitors packet saturation thresholds on port 502, validating zero downtime of
+                    telemetry collection.</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: #64748b; text-align: center;">
+              Pipeline: [Honeypot PLC] ➔ [Promtail Agent] ➔ [Grafana Loki] ➔ [Security Dashboard]
+            </div>
+          </div>
+        </div>
+
+        <!-- Secondary Projects Grid -->
+        <div class="secondary-projects-grid">
+          <!-- Project 2 -->
+          <div class="project-card reveal-on-scroll">
+            <div>
+              <div class="project-card-header">
+                <div class="project-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                  </svg>
+                </div>
+              </div>
+
+              <h3 class="project-title" style="margin-top: 1.25rem; font-size: 1.25rem;" data-i18n="projects.p2.title">Python Network Security &amp;
+                Automation Suite</h3>
+              <p class="project-desc" style="margin-top: 0.75rem;" data-i18n="projects.p2.desc">
+                Developed custom Python tools utilizing sockets and packet crafting libraries for automated port
+                auditing, network diagnostics, and traffic analysis, paired with lightweight graphical user interfaces
+                (CustomTkinter).
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card reveal-on-scroll">
+            <div>
+              <div class="project-card-header">
+                <div class="project-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                  </svg>
+                </div>
+              </div>
+
+              <h3 class="project-title" style="margin-top: 1.25rem; font-size: 1.25rem;" data-i18n="projects.p3.title">Mobile Application Prototyping
+                (Flutter)</h3>
+              <p class="project-desc" style="margin-top: 0.75rem;" data-i18n="projects.p3.desc">
+                Developed cross-platform mobile prototypes and responsive UI workflows during the ISCODE technical
+                program at INELectronics Student Club, focusing on clean software patterns, asynchronous state, and
+                modular widgets.
+              </p>
+            </div>
+
+            <div>
+              <div class="project-tags" style="margin-bottom: 1.25rem;">
+                <span class="project-tag">Flutter</span>
+                <span class="project-tag">Dart</span>
+                <span class="project-tag">ISCODE Program</span>
+                <span class="project-tag">UI Architecture</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. Experience & Certifications (Dual-Track Layout)
+         ========================================================================= -->
+    <section class="experience-section" id="experience">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <h2 class="section-title" data-i18n="exp.title">Field Experience &amp; <span class="highlight">Accreditations</span></h2>
+          <p class="section-desc" data-i18n="exp.desc">On-site industrial immersion coupled with globally verified cybersecurity
+            accreditations.</p>
+        </div>
+
+        <div class="dual-track-grid">
+          <!-- Track A: Field Experience Timeline -->
+          <div class="track-column reveal-on-scroll">
+            <h3 class="track-heading">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+              <span data-i18n="exp.trackA">Field &amp; Technical Experience</span>
+            </h3>
+
+            <div class="timeline-list">
+              <!-- Item 1: Sonatrach -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-card">
+                  <div class="timeline-header">
+                    <span class="timeline-meta" data-i18n="exp.t1.meta">September 2025</span>
+                    <h4 class="timeline-title" data-i18n="exp.t1.title">Electrical &amp; Maintenance Engineering Intern</h4>
+                    <span class="timeline-subtitle">Sonatrach – Exploration &amp; Production (Direction Régionale
+                      Gassi-Touil)</span>
+                  </div>
+
+                  <ul class="timeline-bullets">
+                    <li data-i18n="exp.t1.b1">Completed an on-site industrial maintenance immersion within oil and gas production facilities,
+                      observing continuous operations where safety and availability are vital.</li>
+                    <li data-i18n="exp.t1.b2">Analyzed the physical operational impact of equipment downtime, studying electrical power
+                      distribution, safety instrumented systems, and motor control installations.</li>
+                    <li data-i18n="exp.t1.b3">Examined field maintenance workflows and control circuit integrity governing mission-critical
+                      physical processes.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Item 2: INELectronics Club -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-card">
+                  <div class="timeline-header">
+                    <span class="timeline-meta" data-i18n="exp.t2.meta">2023 – Present</span>
+                    <h4 class="timeline-title" data-i18n="exp.t2.title">Technical Workshop Mentor &amp; Co-Instructor</h4>
+                    <span class="timeline-subtitle">INELectronics Student Club – UMBB</span>
+                  </div>
+
+                  <ul class="timeline-bullets">
+                    <li data-i18n="exp.t2.b1">Co-organized and delivered hands-on technical workshops teaching fellow engineering students
+                      Linux command-line mastery, Git/GitHub version control workflows, and Docker containerization
+                      fundamentals.</li>
+                    <li data-i18n="exp.t2.b2">Mentored junior students on core computer networking principles, TCP/IP stack fundamentals, and
+                      packet flow analysis.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Track B: Verified Certifications & Credentials -->
+          <div class="track-column reveal-on-scroll">
+            <h3 class="track-heading">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+              </svg>
+              <span data-i18n="exp.trackB">Verified Accreditations</span>
+            </h3>
+
+            <div class="cert-cards-list">
+              <!-- CISA / INL -->
+              <div class="cert-card">
+                <div class="cert-issuer-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                  <span>U.S. CISA / Idaho National Laboratory (INL)</span>
+                </div>
+                <h4 class="cert-name" data-i18n="exp.c1.name">Industrial Control Systems (ICS) Cybersecurity Series</h4>
+                <ul class="cert-sublist">
+                  <li>100W: Industrial Control Systems (ICS) Cybersecurity Practices (FY24)</li>
+                  <li>210W-01: Differences in Deployments of Industrial Control Systems</li>
+                  <li>210W-02: Influence of IT Components on Industrial Control Systems</li>
+                  <li>210W-03: Common ICS Components</li>
+                  <li>210W-04: Cybersecurity Within IT and ICS Domains</li>
+                </ul>
+              </div>
+
+              <!-- Harvard CS50 -->
+              <div class="cert-card">
+                <div class="cert-issuer-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                  </svg>
+                  <span>Harvard University</span>
+                </div>
+                <h4 class="cert-name">CS50's Introduction to Cybersecurity</h4>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;" data-i18n="exp.c2.p">
+                  Instructor: Prof. David J. Malan. Comprehensive foundations of authentication, cryptography, cyber
+                  defense, and software vulnerability assessment.
+                </p>
+              </div>
+
+              <!-- Cisco & Edraak -->
+              <div class="cert-card">
+                <div class="cert-issuer-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6">
+                    </path>
+                  </svg>
+                  <span>Cisco Networking Academy &amp; Edraak</span>
+                </div>
+                <h4 class="cert-name" data-i18n="exp.c3.name">Network &amp; Cyber Specializations</h4>
+                <ul class="cert-sublist">
+                  <li>Cisco: Introduction to Cybersecurity</li>
+                  <li>Edraak: Cybersecurity Professional Specialization (5-Course Track)</li>
+                </ul>
+              </div>
+
+              <!-- Udemy & Simplilearn -->
+              <div class="cert-card">
+                <div class="cert-issuer-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg>
+                  <span data-i18n="exp.c4.issuer">Technical Practical Certifications</span>
+                </div>
+                <h4 class="cert-name" data-i18n="exp.c4.name">Hands-On Reconnaissance &amp; Containers</h4>
+                <ul class="cert-sublist">
+                  <li>Udemy: Real NMAP: Network Scanning &amp; Recon (10h)</li>
+                  <li>Udemy: Learn Wireshark Like a Pro (7h) | Ethical Network Mastery</li>
+                  <li>Simplilearn: Getting Started with Docker</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. Services Section
+         ========================================================================= -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <h2 class="section-title" data-i18n="services.title">Specialized <span class="highlight">Capabilities</span></h2>
+          <p class="section-desc" data-i18n="services.desc">Tailored technical services spanning threat emulation, OT protocol telemetry,
+            reconnaissance, and mentorship.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card reveal-on-scroll">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <circle cx="12" cy="11" r="3"></circle>
+              </svg>
+            </div>
+            <h3 class="service-title" data-i18n="services.s1.title">ICS/OT Threat Simulation &amp; Honeypot Deployment</h3>
+            <p class="service-desc" data-i18n="services.s1.desc">
+              Designing containerized honeypots using Conpot to emulate Modbus and industrial PLCs, capturing live
+              attacker techniques without exposing live production infrastructure.
+            </p>
+            <ul class="service-capabilities">
+              <li data-i18n="services.s1.l1">Conpot PLC emulation</li>
+              <li data-i18n="services.s1.l2">Modbus TCP honeynet isolation</li>
+              <li data-i18n="services.s1.l3">Zero-risk adversary deception testbeds</li>
+            </ul>
+          </div>
+
+          <!-- MerrySignal Studio Service -->
+          <div class="service-card reveal-on-scroll">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              </svg>
+            </div>
+            <h3 class="service-title" data-i18n="services.ms.title">MerrySignal Studio: Digital Experiences</h3>
+            <p class="service-desc" data-i18n="services.ms.desc">
+              High-end digital solutions, custom web experiences, and creative automation tailored for businesses.
+              Available in English, Italian, and Arabic.
+            </p>
+            <ul class="service-capabilities">
+              <li data-i18n="services.ms.l1">Professional Digital Experiences</li>
+              <li data-i18n="services.ms.l2">Custom Web Design &amp; Development</li>
+              <li data-i18n="services.ms.l3">Multilingual Solutions (EN, IT, AR)</li>
+            </ul>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card reveal-on-scroll">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <h3 class="service-title" data-i18n="services.s2.title">Industrial Protocol Telemetry &amp; Dashboarding</h3>
+            <p class="service-desc" data-i18n="services.s2.desc">
+              Architecting observability pipelines with Promtail, Grafana, and Loki to aggregate raw industrial protocol
+              logs into real-time operational security dashboards.
+            </p>
+            <ul class="service-capabilities">
+              <li data-i18n="services.s2.l1">Modbus Port 502 traffic parsing</li>
+              <li data-i18n="services.s2.l2">Grafana Loki log indexing</li>
+              <li data-i18n="services.s2.l3">Custom alert rules for register tampering</li>
+            </ul>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card reveal-on-scroll">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
+            <h3 class="service-title" data-i18n="services.s3.title">Network Reconnaissance &amp; Security Automation</h3>
+            <p class="service-desc" data-i18n="services.s3.desc">
+              Authoring specialized Python scripts, Nmap NSE routines, and Wireshark filters to systematically audit
+              network segments, identify open control ports, and flag rogue nodes.
+            </p>
+            <ul class="service-capabilities">
+              <li data-i18n="services.s3.l1">Python socket automation &amp; GUIs</li>
+              <li data-i18n="services.s3.l2">Wireshark deep packet inspection</li>
+              <li data-i18n="services.s3.l3">Automated IP/port inventory sweeps</li>
+            </ul>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card reveal-on-scroll">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="service-title" data-i18n="services.s4.title">Technical Mentorship &amp; Tooling Training</h3>
+            <p class="service-desc" data-i18n="services.s4.desc">
+              Conducting practical training workshops for engineering cohorts, focusing on Linux sysadmin essentials,
+              Docker containerization, Git workflows, and cybersecurity basics.
+            </p>
+            <ul class="service-capabilities">
+              <li data-i18n="services.s4.l1">Linux command-line mastery workshops</li>
+              <li data-i18n="services.s4.l2">Docker containerization fundamentals</li>
+              <li data-i18n="services.s4.l3">Hands-on networking laboratory drills</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. Career Objective Callout Section
+         ========================================================================= -->
+    <section class="career-section" id="objective">
+      <div class="container">
+        <div class="career-card reveal-on-scroll">
+          <div class="career-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <div class="career-text-content">
+            <span class="career-tag" data-i18n="career.tag">// OBIETTIVO PROFESSIONALE & RUOLI TARGET</span>
+            <p class="career-statement" data-i18n="career.statement">
+              "Alla ricerca di una posizione ingegneristica come <span class="target-role">Ingegnere di Cybersecurity ICS/OT</span>, <span
+                class="target-role">Analista SOC OT</span>, o <span class="target-role">Specialista in Sicurezza delle Reti Industriali</span>, applicando un background multidisciplinare in ingegneria dell'automazione e difesa dalle minacce informatiche per proteggere le infrastrutture critiche e le reti di automazione industriale."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. Contact Section
+         ========================================================================= -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <h2 class="section-title" data-i18n="contact.title">Initiate <span class="highlight">Connection</span></h2>
+          <p class="section-desc" data-i18n="contact.desc">Available for full-time engineering roles, security research consultations, and
+            technical inquiries.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Direct Contact Information -->
+          <div class="contact-info-col reveal-on-scroll">
+            <div class="contact-cards-stack">
+              <!-- Email Card -->
+              <a href="mailto:aimmenbenn@gmail.com" class="contact-info-card">
+                <div class="contact-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="contact-details-text">
+                  <span class="label" data-i18n="contact.email">Direct Email</span>
+                  <span class="value">aimmenbenn@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="tel:+393522262160" class="contact-info-card">
+                <div class="contact-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="contact-details-text">
+                  <span class="label" data-i18n="contact.phone">Phone / WhatsApp</span>
+                  <span class="value">+39 352 226 2160</span>
+                </div>
+              </a>
+
+            <div class="contact-info-card">
+                <div class="contact-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="contact-details-text">
+                  <span class="label" data-i18n="contact.location">Base Location</span>
+                  <span class="value" data-i18n="contact.location_value">Catania, Sicily, Italy</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social / Professional Profiles -->
+            <div>
+              <div class="social-links-title" data-i18n="contact.social">Professional Profiles &amp; Repositories</div>
+              <div class="social-links-row">
+                <a href="https://www.linkedin.com/in/aimenics" target="_blank" rel="noopener noreferrer"
+                  class="social-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                  <span>LinkedIn</span>
+                </a>
+
+                <a href="https://github.com/Otrise" target="_blank" rel="noopener noreferrer" class="social-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+
+                <a href="https://www.youtube.com/@Otrise-25" target="_blank" rel="noopener noreferrer"
+                  class="social-btn">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  <span>YouTube</span>
+                </a>
+
+                <a href="https://www.facebook.com/profile.php?id=61596816269737" target="_blank" rel="noopener noreferrer" class="social-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                  </svg>
+                  <span>Facebook</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-card reveal-on-scroll">
+            <form id="contact-form" autocomplete="off">
+              <div class="form-group">
+                <label for="form-name" class="form-label" data-i18n="form.name">Full Name *</label>
+                <input type="text" id="form-name" name="name" class="form-input"
+                  placeholder="e.g. John Doe / Engineering Recruiter" required data-i18n="form.ph_name">
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label" data-i18n="form.email">Email Address *</label>
+                <input type="email" id="form-email" name="email" class="form-input"
+                  placeholder="e.g. j.doe@organization.com" required data-i18n="form.ph_email">
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject" class="form-label" data-i18n="form.subject">Subject / Purpose</label>
+                <input type="text" id="form-subject" name="subject" class="form-input"
+                  placeholder="e.g. ICS Cybersecurity Position / Technical Consultation" data-i18n="form.ph_subject">
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label" data-i18n="form.message">Message *</label>
+                <textarea id="form-message" name="message" class="form-textarea"
+                  placeholder="Detail your operational inquiry, project requirements, or role specification..."
+                  required data-i18n="form.ph_message"></textarea>
+              </div>
+
+              <div id="form-status-msg" class="form-status-msg" role="status"></div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <span data-i18n="form.submit">Transmit Secure Message</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       10. Footer & Back-to-Top
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <p class="footer-copy" data-i18n="footer.copy">&copy; 2025 Aimen Kamal Eddine Benzaoui. All rights reserved.</p>
+        <p class="footer-sub" data-i18n="footer.sub">ICS/OT Cybersecurity &amp; Electrical Engineering Portfolio</p>
+      </div>
+
+      <a href="#hero" id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+        <span data-i18n="footer.top">Back to Top</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/i18n.js" defer></script>
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>

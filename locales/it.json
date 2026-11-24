@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Chi sono",
+    "skills": "Competenze",
+    "projects": "Progetti",
+    "contact": "Contatti"
+  },
+  "hero": {
+    "role": "Studente Magistrale in Ingegneria dell'Automazione - Università di Catania",
+    "studio": "Fondatore MerrySignal Studio",
+    "download_cv": "Scarica CV",
+    "cv_it": "Scarica CV Italiano",
+    "cv_en": "Scarica CV Inglese"
+  },
+  "contact": {
+    "phone": "Telefono / WhatsApp",
+    "location": "Dove trovarmi",
+    "email": "Email"
+  }
+}
