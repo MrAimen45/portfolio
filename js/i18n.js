@@ -1,7 +1,21 @@
 const translations = {
   it: {
     title: "Aimen Kamal Eddine Benzaoui | MerrySignal Studio & Automation Engineering",
-    nav: { home: "Home", about: "Chi Sono", skills: "Competenze", projects: "Progetti", experience: "Esperienza", contact: "Contatti" },
+    nav: {
+      home: "Home",
+      about: "Chi Sono",
+      skills: "Competenze",
+      projects: "Progetti",
+      experience: "Esperienza",
+      contact: "Contatti",
+      about_sub: "Il mio percorso",
+      skills_sub: "Cosa so fare",
+      projects_sub: "Il mio lavoro",
+      experience_sub: "Dove ho lavorato",
+      services_sub: "Cosa offro",
+      objective_sub: "La mia visione",
+      contact_sub: "Parliamo"
+    },
     hero: {
       name: "AIMEN KAMAL EDDINE",
       surname: "BENZAOUI",
@@ -24,7 +38,21 @@ const translations = {
   },
   en: {
     title: "Aimen Kamal Eddine Benzaoui | MerrySignal Studio & Automation Engineering",
-    nav: { home: "Home", about: "About", skills: "Skills", projects: "Projects", experience: "Experience", contact: "Contact" },
+    nav: {
+      home: "Home",
+      about: "About",
+      skills: "Skills",
+      projects: "Projects",
+      experience: "Experience",
+      contact: "Contact",
+      about_sub: "My Journey",
+      skills_sub: "What I Do",
+      projects_sub: "My Work",
+      experience_sub: "Where I've Been",
+      services_sub: "What I Offer",
+      objective_sub: "My Vision",
+      contact_sub: "Let's Talk"
+    },
     hero: {
       name: "AIMEN KAMAL EDDINE",
       surname: "BENZAOUI",
@@ -40,34 +68,27 @@ const translations = {
       lead: "I am an <strong>Electrical & Electronics Engineer</strong> specializing in Industrial Control Systems (ICS/OT) Security.",
       details1: "Graduated in <strong>Electrical & Electronics Engineering</strong> from the <strong>Institute of Electrical and Electronics Engineering (IGEE)</strong> at the <strong>University M'Hamed Bougara of Boumerdès (UMBB)</strong>, complemented by hands-on immersion at the <strong>Sonatrach (Gassi Touil) Oil & Gas production facilities</strong>. Currently an M.Sc. student in <strong>Automation Engineering and Control of Complex Systems</strong> at the <strong>University of Catania</strong>.",
       details2: "My approach bridges hands-on engineering principles and containerized attack-detection architectures (Docker, Conpot, Loki, Grafana) to safeguard critical infrastructure.",
-      details2b: "I leverage containerized attack-detection architectures (Docker, Conpot, Loki, Grafana) to safeguard critical infrastructure.",
-      details3: "Unlike traditional enterprise IT security, Operational Technology (OT) demands a deep understanding of physical consequences. My mission is building defense systems that respect real-world physics.",
-      details4: "My mission is building defense systems that respect real-world physics.",
-      details5: "My mission is building defense systems that respect real-world physics.",
-      contact: { title: "Initiate Connection", desc: "Available for full-time engineering roles, security research consultations, and technical inquiries.", email: "Direct Email", phone: "Phone / WhatsApp", location: "Base Location", location_value: "Catania, Italy" }
-    },
-    about: {
-      title: "Hardware Realities & Cyber Defense",
-      desc: "Grounding industrial cybersecurity in hands-on electrical engineering, operational safety, and field experience.",
-      lead: "I am an <strong>Electrical & Electronics Engineer</strong> specializing in Industrial Control Systems (ICS/OT) Security.",
-      details1: "Graduated in <strong>Electrical & Electronics Engineering</strong> from the <strong>Institute of Electrical and Electronics Engineering (IGEE)</strong> at the <strong>University M'Hamed Bougara of Boumerdès (UMBB)</strong>, complemented by hands-on immersion at the <strong>Sonatrach (Gassi Touil) Oil & Gas production facilities</strong>. Currently an M.Sc. student in <strong>Automation Engineering and Control of Complex Systems</strong> at the <strong>University of Catania</strong>.",
-      details2: "My approach bridges hands-on engineering principles and containerized attack-detection architectures (Docker, Conpot, Loki, Grafana) to safeguard critical infrastructure.",
-      details3: "Unlike traditional enterprise IT security, Operational Technology (OT) demands a deep understanding of physical consequences. My mission is building defense systems that respect real-world physics.",
-      contact: { title: "Initiate Connection", desc: "Available for full-time engineering roles, security research consultations, and technical inquiries.", email: "Direct Email", phone: "Phone / WhatsApp", location: "Base Location", location_value: "Catania, Italy" }
-    },
-    about: {
-      title: "Hardware Realities & Cyber Defense",
-      desc: "Grounding industrial cybersecurity in hands-on electrical engineering, operational safety, and field experience.",
-      lead: "I am an <strong>Electrical & Electronics Engineer</strong> specializing in Industrial Control Systems (ICS/OT) Security.",
-      details1: "Graduated in <strong>Electrical & Electronics Engineering</strong> from the <strong>Institute of Electrical and Electronics Engineering (IGEE)</strong> at the <strong>University M'Hamed Bougara of Boumerdès (UMBB)</strong>, complemented by hands-on immersion at the <strong>Sonatrach (Gassi Touil) Oil & Gas production facilities</strong>. Currently an M.Sc. student in <strong>Automation Engineering and Control of Complex Systems</strong> at the <strong>University of Catania</strong>.",
-      details2: "My approach bridges hands-on engineering principles and containerized attack-detection architectures (Docker, Conpot, Loki, Grafana) to safeguard critical infrastructure.",
       details3: "Unlike traditional enterprise IT security, Operational Technology (OT) demands a deep understanding of physical consequences. My mission is building defense systems that respect real-world physics.",
       contact: { title: "Initiate Connection", desc: "Available for full-time engineering roles, security research consultations, and technical inquiries.", email: "Direct Email", phone: "Phone / WhatsApp", location: "Base Location", location_value: "Catania, Italy" }
     }
   },
   ar: {
     title: "أيمن كمال الدين بن زاوي | ميريسيجال ستوديو وهندسة الأتمتة",
-    nav: { home: "الرئيسية", about: "من أنا", skills: "المهارات", projects: "المشاريع", experience: "الخبرة", contact: "اتصل بي" },
+    nav: {
+      home: "الرئيسية",
+      about: "من أنا",
+      skills: "المهارات",
+      projects: "المشاريع",
+      experience: "الخبرة",
+      contact: "اتصل بي",
+      about_sub: "مسيرتي",
+      skills_sub: "ما أجيده",
+      projects_sub: "أعمالي",
+      experience_sub: "أين عملت",
+      services_sub: "ما أقدمه",
+      objective_sub: "رؤيتي",
+      contact_sub: "لنتحدث"
+    },
     hero: {
       name: "أيمن كمال الدين",
       surname: "بن زاوي",
@@ -87,8 +108,8 @@ const translations = {
       details3: "على عكس أمن المعلومات التقليدي، تتطلب التكنولوجيا التشغيلية (OT) فهماً عميقاً للنتائج الفيزيائية. مهمتي هو بناء أنظمة دفاع تحترم قوانين الفيزياء في العالم الحقيقي.",
       details4: "على عكس أمن المعلومات التقليدي، تتطلب التكنولوجيا التشغيلية (OT) فهماً عميقاً للنتائج الفيزيائية.",
       contact: { title: "ابدأ التواصل", desc: "متاح للأدوار الهندسية بدوام كامل، استشارات البحث الأمني، والاستفسارات التقنية.", email: "البريد الإلكتروني المباشر", phone: "هاتف / واتساب", location: "الموقع", location_value: "كاتانيا، إيطاليا" }
-  }
-};
+    }
+  };
 
 function translatePage(lang) {
   const t = translations[lang];
@@ -111,23 +132,11 @@ function translatePage(lang) {
   });
 }
 
-function initLanguageSwitcher() {
-  const langSwitch = document.getElementById('lang-switcher');
-  if (!langSwitch) return;
+function applyLanguage(lang) {
+  translatePage(lang);
+}
 
+document.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('lang') || 'it';
-  langSwitch.value = savedLang;
   translatePage(savedLang);
-
-  langSwitch.addEventListener('change', (e) => {
-    const lang = e.target.value;
-    localStorage.setItem('lang', lang);
-    translatePage(lang);
-  });
-}
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initLanguageSwitcher);
-} else {
-  initLanguageSwitcher();
-}
+});
