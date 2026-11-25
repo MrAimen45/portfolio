@@ -41,24 +41,14 @@ function initLanguageSwitcher() {
   const langSwitch = document.getElementById('lang-switcher');
   if (!langSwitch) return;
 
-  // Set default language to Italian
   const savedLang = localStorage.getItem('lang') || 'it';
   langSwitch.value = savedLang;
-  applyLanguage(savedLang);
 
   langSwitch.addEventListener('change', (e) => {
     const lang = e.target.value;
     localStorage.setItem('lang', lang);
     applyLanguage(lang);
   });
-}
-
-function applyLanguage(lang) {
-  document.documentElement.lang = lang;
-  document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
-
-  document.body.setAttribute('data-lang', lang);
-  console.log(`Language applied: ${lang}`);
 }
 
 /* ... existing functions ... */
